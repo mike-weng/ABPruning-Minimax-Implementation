@@ -1,0 +1,38 @@
+Code structure:
+Our AI consists of three main parts, our player klu2; our board, which is the data structure that is used to represent the state of the game and several helper functions used by the evaluation function; and lastly, a node data structure that is used in our minimax search.
+
+Search strategy:
+Our search strategy uses a minimax search as it is a zero-sum game. Due to the space constraint we chose to only use one node during the minimax search, instead of generating children nodes. Then to search the tree nodes or equivalently our board states, we update the node and then pass it down to the next recursive function call. 
+
+Evaluation function:
+Our evaluation function was a simple function that calculated the difference between the number of hexagons that are captured by our player and the opponent player. 
+
+Creative techniques:
+We have employed a number of creative technique to decrease the run time of our minimax algorithm, and increase the search depth.
+
+The first thing that we did was using alpha-beta pruning during our minimax search which decreased the run time of our search. This meant that we were able to search deeper in the tree using the same time.
+The second thing that we did was to do a primitive sorting of the edges before choosing which branch to traverse. We calculated the evaluation function of our children nodes, and then picked the one with the highest value to go first.
+
+The last thing that we did was increasing the search depth of the search algorithm as the branching factor decreased to calculate when to increase the depth it was calculated via:
+
+b^d = (b-m)^(b+1) this implies that m = b - b^(d/(d+1))
+
+Where: b is the branching factor or number of moves in game
+	   d is the depth
+           m is the number of moves made
+	   (b-m) is the number of moves left in the game
+
+Let: b’ = b - m
+      d’ = d + 1
+
+Then it is obvious from the above result that:
+
+b’^d’ = b^d
+
+Hence our branching factor would have to decrease by m for us to increase the search depth by 1.
+
+Then to calculate the next branching factor whereby we can increase our search depth by 1 again, just calculate m’:
+
+b’^d’ = (b’ - m’)^(d’+1) this implies that m’ = b’ - b’^(d’/(d’+1))
+
+So then our branching factor would have to decrease by m’ for us to increase the search depth by 1 again, which is done until our depth is greater than the number of moves left in the game.
