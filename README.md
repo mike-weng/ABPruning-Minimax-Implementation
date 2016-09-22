@@ -6,11 +6,11 @@ In this project, I am implementing a Minimax algorithm using Alpha-Beta pruning 
 You can import the Referee source files in your Java editor and run it, or you can use the command prompt to run the Referee.
 The following describes a scenario to use the command line to run the Referee.
 Assume that 
-1. you are in a Windows or Unix command prompt where the current directory is the root of the Referee-1-0/bin directory;
-2. binaries of an implementation of a player class called SimplePlayer is in “../../SimpleDirectory/bin”;
-3. the full class name of SimplePlayer class is “aiproj.hexifence.SimplePlayer”;
-4. this implementation uses the aima-core library which is in the directory “../../aima-core.jar”. The following
-command can be used to run the referee:
+1. you are in a Windows or Unix command prompt where the current directory is the root of the Referee-1-0/bin directory
+2. binaries of an implementation of a player class called SimplePlayer is in “../../SimpleDirectory/bin”
+3. the full class name of SimplePlayer class is “aiproj.hexifence.SimplePlayer”
+4. this implementation uses the aima-core library which is in the directory “../../aima-core.jar”. 
+The following command can be used to run the referee:
 > java -cp ../../aima-core.jar;../../SimplePlayer/bin;. 
 aiproj.hexifence.Referee 6 aiproj.hexifence.SimplePlayer 
 aiproj.hexifence.SimplePlayer
