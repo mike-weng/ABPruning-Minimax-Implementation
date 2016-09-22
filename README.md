@@ -3,22 +3,22 @@
 In this project, I am implementing a Minimax algorithm using Alpha-Beta pruning to play a board game. This game is played on a hexagonal board of dimension N, which comprises a grid of hexagonal cells. A hexagonal board has dimension N in the sense that each edge of the board comprises N cells.
 
 ## Rules
-• A player is chosen arbitrarily to make the first move.
-• Each player takes a turn at placing one of their pieces at any free edge on the
+- A player is chosen arbitrarily to make the first move.
+- Each player takes a turn at placing one of their pieces at any free edge on the
 board.
-• Players cannot move or remove a piece once it has been placed on the board.
-• A hexagonal cell is captured once the player places his/her piece on the last
+- Players cannot move or remove a piece once it has been placed on the board.
+- A hexagonal cell is captured once the player places his/her piece on the last
 empty edge of that cell.
-• The player who captures one or more cells with one move receives an
+- The player who captures one or more cells with one move receives an
 additional move.
-• A cell is free if one or more of its edges are empty, and it has not been
+- A cell is free if one or more of its edges are empty, and it has not been
 captured.
-• The game finishes when there are no free cells left on the board.
-• The winner of the game is the player with the most captured cells.
-• When a player captures a cell, it may contain pieces of either player on the
+- The game finishes when there are no free cells left on the board.
+- The winner of the game is the player with the most captured cells.
+- When a player captures a cell, it may contain pieces of either player on the
 edges. The player who places his/her piece on the last empty edge of the cell is
 the player who captures the cell.
-• When a player captures a cell, the player is given an additional move. If that
+- When a player captures a cell, the player is given an additional move. If that
 additional move also captures a cell, then the player is given another additional move, and so on.
 
 ## Board
